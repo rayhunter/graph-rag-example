@@ -35,10 +35,10 @@ if not OPENAI_API_KEY:
     raise ValueError("The OPENAI_API_KEY environment variable is not set.")
 
 # Initialize Astra connection using Cassio
-ASTRA_DB_ID = os.getenv("ASTRA_DB_DATABASE_ID")
-ASTRA_TOKEN = os.getenv("ASTRA_DB_APPLICATION_TOKEN")
-ASTRA_ENDPOINT = os.getenv("ASTRA_DB_ENDPOINT")
-if not all([ASTRA_DB_ID, ASTRA_TOKEN, ASTRA_ENDPOINT]):
+ASTRA_DB_DATABASE_ID = os.getenv("ASTRA_DB_DATABASE_ID")
+ASTRA_DB_APPLICATION_TOKEN = os.getenv("ASTRA_DB_APPLICATION_TOKEN")
+ASTRA_DB_ENDPOINT = os.getenv("ASTRA_DB_ENDPOINT")
+if not all([ASTRA_DB_DATABASE_ID, ASTRA_DB_APPLICATION_TOKEN, ASTRA_DB_ENDPOINT]):
     raise ValueError("Astra DB credentials must be set.")
 
 MOVIE_NODE_TABLE = "movie_graph"
